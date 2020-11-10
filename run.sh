@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $# -ne 1 ] ; then
     echo 'Please give exactly one argument, your program name'
     exit 0
