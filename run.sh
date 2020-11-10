@@ -6,6 +6,7 @@ if [ $# -ne 1 ] ; then
 fi
 
 if [ -f "$1" ] ; then
+	correct=1
 	for file in input*.txt
 	do
 		./$1 < $file > test.txt
@@ -15,8 +16,12 @@ if [ -f "$1" ] ; then
 		if [ "$DIFF" ] ; then
 			echo "ERROR running $file"
 			echo $DIFF
+			correct=0
 		fi
 	done
+	if [ $correct -eq 1 ] ; then
+		echo "All good!"
+	fi
 else
 	echo "File not found"
 fi
