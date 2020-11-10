@@ -22,6 +22,7 @@ if [ -f "$1" ] ; then
 	if [ $correct -eq 1 ] ; then
 		echo "All good!"
 	fi
+	rm test.txt
 else
 	echo "File not found"
 fi
