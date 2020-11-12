@@ -18,4 +18,5 @@ Usage:
 $ ./run.sh [executable name]
 ```
 
-All input files and their respective output files as well as the executable should be in the same directory as the runner.
+All input files and their respective output files as well as the executable should be in the same directory as the runner.  
+Your program should read from STDIN and print to STDOUT.
