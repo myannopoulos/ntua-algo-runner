@@ -7,7 +7,7 @@ fi
 
 if [ -f "$1" ] ; then
 	correct=1
-	for file in input*.txt
+	for file in $(ls -v input*.txt)
 	do
 		./$1 < $file > test.txt
 		num=$(echo $file | sed 's/[^0-9]*//g')
